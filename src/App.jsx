@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import icon from "../images/icon-star.svg";
+import thankIcon from "../images/illustration-thank-you.svg";
 
 function Rate(props) {
   const [active, setActive] = useState(null);
@@ -37,7 +39,7 @@ function RatePage(props) {
         className="rounded-full bg-lightBlue w-14 h-14 
         items-center justify-center flex mb-7"
       >
-        <img src="./images/icon-star.svg" alt="" />
+        <img src={icon} alt="" />
       </div>
       <div className="mb-5 font-bold">
         <h1 className="text-2xl text-white"> How did we do?</h1>
@@ -66,7 +68,7 @@ function ThankPage(props) {
   return (
     <div className="mx-5 md:mx-auto md:h-5/12 md:w-1/4 bg-darkBlue rounded-xl p-10 flex flex-col justify-between items-center">
       <div className="m-5">
-        <img src="./images/illustration-thank-you.svg" alt="" />
+        <img src={thankIcon} alt="" />
       </div>
       <div className="m-5 bg-lightBlue py-2 px-5 rounded-3xl">
         <p className="text-orange">You selected {props.value} out of 5</p>
